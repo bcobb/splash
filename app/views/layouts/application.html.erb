@@ -21,6 +21,7 @@
     <%= content_tag(:script, type: 'text/x-copy', id: 'registered_interest') do %>
       We&apos;ve registered your interest.
     <% end %>
+    <%= tag(:link, rel: "interested-user-worker", href: asset_url("interested_user_worker.js"), type: 'text/javascript') %>
   </head>
 
   <body>
@@ -33,7 +34,6 @@
       <% end %>
     <% end %>
 
-    <%= javascript_include_tag "interested_user_worker", class: "interested-user-worker" %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

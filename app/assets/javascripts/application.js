@@ -14,7 +14,7 @@
 //= require_self
 
 (function($) {
-  var worker = new Worker($('.interested-user-worker').attr('src'));
+  var worker = new Worker($('[rel="interested-user-worker"]').attr('href'));
   var signal = $('.signal');
   var alertClass = 'alert-box';
 
@@ -43,5 +43,3 @@
     event.preventDefault();
   });
 })(jQuery);
-
-$(function(){ $(document).foundation(); });
