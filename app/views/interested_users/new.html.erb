@@ -1,0 +1,21 @@
+<%= content_tag(:div, class: 'row') do %>
+  <%= content_tag(:div, class: %w(large-12 columns)) do %>
+    <%= form_for(@interested_user, :url => root_url) do |f| %>
+      <%= content_tag(:fieldset) do %>
+        <%= content_tag(:legend) do %>
+          Interested?
+        <% end %>
+
+        <%= content_tag(:div, class: %w(row collapse)) do %>
+          <%= content_tag(:div, class: %w(large-10 columns)) do %>
+            <%= f.label :email, class: 'hide' %>
+            <%= f.email_field :email, required: true, placeholder: "Email" %>
+          <% end%>
+          <%= content_tag(:div, class: %w(large-2 columns)) do %>
+            <%= f.submit "I'm interested!", class: 'button prefix' %>
+          <% end %>
+        <% end%>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
